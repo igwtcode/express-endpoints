@@ -1,7 +1,7 @@
 {
   "name": "@igwtcode/express-endpoints",
   "description": "easy way to extract and print list of express app rest api endpoints",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
