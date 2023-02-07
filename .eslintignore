@@ -1,0 +1,13 @@
+.github
+.vscode
+.wireit
+docs
+node_modules
+coverage
+dist
+tmp
+jest.config.ts
+tsup.config.ts
+commitlint.config.js
+LICENSE
+*.md

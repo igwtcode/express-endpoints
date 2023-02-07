@@ -1,0 +1,27 @@
+name: release
+on:
+  workflow_dispatch:
+jobs:
+  release:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    name: node lts on ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SEMANTIC_RELEASE_REPO_TOKEN }}
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+          node-version: lts/*
+      - run: npm ci
+      - run: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_REPO_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

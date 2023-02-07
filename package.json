@@ -1,0 +1,136 @@
+{
+  "name": "@igwtcode/express-endpoints",
+  "description": "easy way to extract and print list of express app rest api endpoints",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": {
+    "name": "igwtcode"
+  },
+  "homepage": "https://github.com/igwtcode/express-endpoints#readme",
+  "bugs": {
+    "url": "https://github.com/igwtcode/express-endpoints/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igwtcode/express-endpoints"
+  },
+  "scripts": {
+    "release": "wireit",
+    "build": "wireit",
+    "lint": "wireit",
+    "lint:tsc": "wireit",
+    "format": "wireit",
+    "test": "wireit",
+    "clean:deep": "wireit",
+    "clean": "wireit"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.19",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.2",
+    "jest": "^29.4.1",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.2",
+    "semantic-release": "^20.1.0",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.5",
+    "wireit": "^0.9.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "wireit": {
+    "release": {
+      "command": "semantic-release",
+      "dependencies": [
+        "build"
+      ]
+    },
+    "build": {
+      "command": "tsup",
+      "dependencies": [
+        "lint",
+        "test"
+      ],
+      "output": [
+        "dist"
+      ],
+      "clean": true
+    },
+    "lint": {
+      "command": "eslint --fix --color --max-warnings 0 .",
+      "files": [
+        "src/**/*.ts",
+        ".eslintignore"
+      ],
+      "dependencies": [
+        "lint:tsc"
+      ]
+    },
+    "lint:tsc": {
+      "command": "tsc",
+      "dependencies": [
+        "format"
+      ]
+    },
+    "format": {
+      "command": "prettier --write src/**/*.ts"
+    },
+    "test": {
+      "command": "jest",
+      "output": [
+        "coverage"
+      ],
+      "clean": true
+    },
+    "clean:deep": {
+      "command": "npm cache clean --force",
+      "dependencies": [
+        "clean"
+      ]
+    },
+    "clean": {
+      "command": "rimraf package-lock.json dist node_modules .eslintcache coverage"
+    }
+  },
+  "keywords": [
+    "express",
+    "expressjs",
+    "typescript",
+    "javascript",
+    "rest",
+    "api",
+    "rest-api",
+    "endpoint",
+    "list"
+  ]
+}

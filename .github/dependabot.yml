@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+    assignees:
+      - "igwtcode"
+    schedule:
+      timezone: "Europe/Berlin"
+      interval: "weekly"
+      day: "saturday"
+      time: "09:00"
