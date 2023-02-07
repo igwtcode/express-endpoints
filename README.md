@@ -5,7 +5,16 @@
 [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![GitHub license](https://img.shields.io/github/license/igwtcode/express-endpoints?color=blue)](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE)
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/igwtcode/express-endpoints)
+![node-current](https://img.shields.io/node/v/@igwtcode/express-endpoints?color=2db769)
+
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label=@igwtcode/express-endpoints)](https://github.com/igwtcode/express-endpoints)
+[![main](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml)
+[![release](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/igwtcode/express-endpoints?color=2db749&logo=github)](https://github.com/igwtcode/express-endpoints/releases)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/igwtcode/express-endpoints?color=2db749&logo=github)](https://github.com/igwtcode/express-endpoints/tags)
+
+[![npm](https://img.shields.io/npm/v/@igwtcode/express-endpoints?color=2db769&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
+[![npm](https://img.shields.io/npm/dt/@igwtcode/express-endpoints)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
 
 easy way to extract and print list of express app rest api endpoints
 
