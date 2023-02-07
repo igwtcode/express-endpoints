@@ -3,18 +3,18 @@
 [![TypeScript](https://img.shields.io/badge/--3178C6?logo=typescript&logoColor=ffffff)](https://www.typescriptlang.org/)
 [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
 [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![GitHub license](https://img.shields.io/github/license/igwtcode/express-endpoints?color=blue)](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE)
-![node-current](https://img.shields.io/node/v/@igwtcode/express-endpoints?color=2db769)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-success.svg)](http://commitizen.github.io/cz-cli/)
+[![GitHub license](https://img.shields.io/github/license/igwtcode/express-endpoints?color=informational)](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE)
+![node-current](https://img.shields.io/node/v/@igwtcode/express-endpoints?color=green)
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label=@igwtcode/express-endpoints)](https://github.com/igwtcode/express-endpoints)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/igwtcode/express-endpoints?color=informational&logo=github)](https://github.com/igwtcode/express-endpoints/releases)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/igwtcode/express-endpoints?color=informational&logo=github)](https://github.com/igwtcode/express-endpoints/tags)
 [![main](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml)
 [![release](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/igwtcode/express-endpoints?color=2db749&logo=github)](https://github.com/igwtcode/express-endpoints/releases)
-[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/igwtcode/express-endpoints?color=2db749&logo=github)](https://github.com/igwtcode/express-endpoints/tags)
 
-[![npm](https://img.shields.io/npm/v/@igwtcode/express-endpoints?color=2db769&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
-[![npm](https://img.shields.io/npm/dt/@igwtcode/express-endpoints)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
+[![npm](https://img.shields.io/npm/v/@igwtcode/express-endpoints?color=informational&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
+[![npm](https://img.shields.io/npm/dt/@igwtcode/express-endpoints?color=green)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
 
 easy way to extract and print list of express app rest api endpoints
 
@@ -49,7 +49,8 @@ npm install @igwtcode/express-endpoints
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "@igwtcode/express-endpoints": "^1.0.0"
   }
 }
 ```
@@ -76,7 +77,8 @@ const router = Router();
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "@igwtcode/express-endpoints": "^1.0.0"
   }
 }
 ```
@@ -140,7 +142,8 @@ app.listen(3000, () => console.log('\nlistening on port 3000'));
     "start": "ts-node-esm app.ts"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "@igwtcode/express-endpoints": "^1.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.16",
@@ -181,7 +184,8 @@ app.listen(3000, () => console.log('\nlistening on port 3000'));
     "start": "ts-node app.ts"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "@igwtcode/express-endpoints": "^1.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.16",
@@ -253,11 +257,6 @@ app.listen(3000, () => console.log('\nlistening on port 3000'));
 ## Sample Output
 
 ![output-snapshot-01](https://github.com/igwtcode/express-endpoints/blob/main/docs/output-snapshot-01.png)
-
-## Keywords
-
-node, nodejs, node.js, express, expressjs, express.js, rest api, list, endpoint, ExpressEndpoints, express-endpoints,
-router, middleware, typescript, javascript, github, npm, package
 
 ## License
 
