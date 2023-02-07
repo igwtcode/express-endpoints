@@ -1,5 +1,12 @@
 # express-endpoints
 
+[![TypeScript](https://img.shields.io/badge/--3178C6?logo=typescript&logoColor=ffffff)](https://www.typescriptlang.org/)
+[![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
+[![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![GitHub license](https://img.shields.io/github/license/igwtcode/express-endpoints?color=blue)](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE)
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/igwtcode/express-endpoints)
+
 easy way to extract and print list of express app rest api endpoints
 
 ## Installation
