@@ -74,14 +74,31 @@ export class ExpressEndpoints {
 
     for (const layer of app._router.stack) {
       try {
-        if (layer.name === 'router' && layer.handle && layer.handle.stack && Array.isArray(layer.handle.stack)) {
+        if (
+          layer.name === 'router' &&
+          layer.handle &&
+          layer.handle.stack &&
+          Array.isArray(layer.handle.stack)
+        ) {
           for (const stack of layer.handle.stack) {
-            if (!(stack && stack.route && stack.route.methods && typeof stack.route.methods === 'object')) continue;
+            if (
+              !(
+                stack &&
+                stack.route &&
+                stack.route.methods &&
+                typeof stack.route.methods === 'object'
+              )
+            )
+              continue;
             Object.keys(stack.route.methods).forEach((method) => {
               this.addItem('router', method, split(layer.regexp), stack.route.path);
             });
           }
-        } else if (layer.route && layer.route.methods && typeof layer.route.methods === 'object') {
+        } else if (
+          layer.route &&
+          layer.route.methods &&
+          typeof layer.route.methods === 'object'
+        ) {
           if (JSON.stringify(layer.route.methods) === allMethods) {
             this.addItem('middleware', 'all', [], layer.route.path);
           } else {
@@ -104,12 +121,19 @@ export class ExpressEndpoints {
    * @param route - Route of the endpoint (e.g. `/single`)
    * @returns {void}
    */
-  private addItem = (type: EndpointType, method: string, basePath: string | string[], route: string): void => {
+  private addItem = (
+    type: EndpointType,
+    method: string,
+    basePath: string | string[],
+    route: string,
+  ): void => {
     const bp = Array.isArray(basePath) ? basePath : [basePath];
     this.items.push({
       type,
       method: method.toUpperCase(),
-      route: bp.join('/') + (route.startsWith('/') ? route : route.length ? `/${route}` : '') || '/',
+      route:
+        bp.join('/') +
+          (route.startsWith('/') ? route : route.length ? `/${route}` : '') || '/',
     });
   };
 
@@ -124,7 +148,9 @@ export class ExpressEndpoints {
     const p2 = !props?.short ? endpoint.type.padEnd(15) : '';
     const p3 = endpoint.method.padEnd(12);
     const p4 = endpoint.route;
-    return props?.color ? chalk.green(p1) + chalk.cyan(p2) + chalk.blue(p3) + chalk.blueBright(p4) : p1 + p2 + p3 + p4;
+    return props?.color
+      ? chalk.green(p1) + chalk.cyan(p2) + chalk.blue(p3) + chalk.blueBright(p4)
+      : p1 + p2 + p3 + p4;
   };
 
   /**

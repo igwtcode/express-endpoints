@@ -4,14 +4,14 @@
 [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
 [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-success.svg)](http://commitizen.github.io/cz-cli/)
-[![GitHub license](https://img.shields.io/github/license/igwtcode/express-endpoints?color=informational)](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 ![node-current](https://img.shields.io/node/v/@igwtcode/express-endpoints?color=green)
-[![npm](https://img.shields.io/npm/v/@igwtcode/express-endpoints?color=informational&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
-[![npm](https://img.shields.io/npm/dt/@igwtcode/express-endpoints?color=green)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
-
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label=@igwtcode/express-endpoints)](https://github.com/igwtcode/express-endpoints)
+[![GitHub license](https://img.shields.io/github/license/igwtcode/express-endpoints?color=informational)](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/igwtcode/express-endpoints?color=informational&logo=github)](https://github.com/igwtcode/express-endpoints/releases)
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/igwtcode/express-endpoints?color=informational&logo=github)](https://github.com/igwtcode/express-endpoints/tags)
+[![npm](https://img.shields.io/npm/v/@igwtcode/express-endpoints?color=informational&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
+[![npm](https://img.shields.io/npm/dt/@igwtcode/express-endpoints?color=informational&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
 [![main](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml)
 [![release](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml)
 
@@ -101,7 +101,9 @@ const router = express.Router();
 router.get('/single', (req, res) => res.send(`${req.method} ${req.path}`));
 router.post('', (req, res) => res.send(`${req.method} ${req.path}`));
 router.put('/:id', (req, res) => res.send(`${req.method} ${req.path} ${req.params.id}`));
-router.delete('/:id', (req, res) => res.send(`${req.method} ${req.path} ${req.params.id}`));
+router.delete('/:id', (req, res) =>
+  res.send(`${req.method} ${req.path} ${req.params.id}`),
+);
 
 app.use('/tags', router);
 
@@ -112,7 +114,7 @@ app.use((err, req, res, next) => res.status(500).send('error'));
 
 app.all('*', (req, res, next) => res.sendStatus(404));
 
-const endpoints = new ExpressEndpoints(app); // app is an instance of express or Application
+const endpoints = new ExpressEndpoints(app);
 
 console.log('*** with default options');
 endpoints.print();
@@ -227,20 +229,33 @@ const router = Router();
 #### example
 
 ```typescript
-router.get('/single', (req: Request, res: Response) => res.send(`${req.method} ${req.path}`));
+router.get('/single', (req: Request, res: Response) =>
+  res.send(`${req.method} ${req.path}`),
+);
 router.post('', (req: Request, res: Response) => res.send(`${req.method} ${req.path}`));
-router.put('/:id', (req: Request, res: Response) => res.send(`${req.method} ${req.path} ${req.params.id}`));
-router.delete('/:id', (req: Request, res: Response) => res.send(`${req.method} ${req.path} ${req.params.id}`));
+router.put('/:id', (req: Request, res: Response) =>
+  res.send(`${req.method} ${req.path} ${req.params.id}`),
+);
+router.delete('/:id', (req: Request, res: Response) =>
+  res.send(`${req.method} ${req.path} ${req.params.id}`),
+);
 
 app.use('/tags', router);
 
-app.get('/testGet', (req: Request, res: Response) => res.send(`${req.method} ${req.path}`));
-app.post('/testPost', (req: Request, res: Response) => res.send(`${req.method} ${req.path}`));
+app.get('/testGet', (req: Request, res: Response) =>
+  res.send(`${req.method} ${req.path}`),
+);
+app.post('/testPost', (req: Request, res: Response) =>
+  res.send(`${req.method} ${req.path}`),
+);
 
-app.use((err: any, req: Request, res: Response, next: NextFunction) => res.status(500).send('error'));
+app.use((err: any, req: Request, res: Response, next: NextFunction) =>
+  res.status(500).send('error'),
+);
 
 app.all('*', (req: Request, res: Response, next: NextFunction) => res.sendStatus(404));
-const endpoints = new ExpressEndpoints(app); // app is an instance of express or Application
+
+const endpoints = new ExpressEndpoints(app);
 
 console.log('*** with default options');
 endpoints.print();
@@ -262,4 +277,4 @@ app.listen(3000, () => console.log('\nlistening on port 3000'));
 
 ## License
 
-MIT License ([see license](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE))
+MIT ([see license](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE))
