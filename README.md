@@ -6,15 +6,14 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-success.svg)](http://commitizen.github.io/cz-cli/)
 [![GitHub license](https://img.shields.io/github/license/igwtcode/express-endpoints?color=informational)](https://github.com/igwtcode/express-endpoints/blob/main/LICENSE)
 ![node-current](https://img.shields.io/node/v/@igwtcode/express-endpoints?color=green)
+[![npm](https://img.shields.io/npm/v/@igwtcode/express-endpoints?color=informational&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
+[![npm](https://img.shields.io/npm/dt/@igwtcode/express-endpoints?color=green)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label=@igwtcode/express-endpoints)](https://github.com/igwtcode/express-endpoints)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/igwtcode/express-endpoints?color=informational&logo=github)](https://github.com/igwtcode/express-endpoints/releases)
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/igwtcode/express-endpoints?color=informational&logo=github)](https://github.com/igwtcode/express-endpoints/tags)
 [![main](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/main.yml)
 [![release](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml/badge.svg)](https://github.com/igwtcode/express-endpoints/actions/workflows/release.yml)
-
-[![npm](https://img.shields.io/npm/v/@igwtcode/express-endpoints?color=informational&logo=npm)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
-[![npm](https://img.shields.io/npm/dt/@igwtcode/express-endpoints?color=green)](https://www.npmjs.com/package/@igwtcode/express-endpoints)
 
 easy way to extract and print list of express app rest api endpoints
 
@@ -24,12 +23,15 @@ easy way to extract and print list of express app rest api endpoints
 npm install @igwtcode/express-endpoints
 ```
 
-> install express (if it's not already installed)
->
-> ```bash
-> npm install express
-> npm install -D @types/express # for typescript
-> ```
+<details>
+<summary><small>install express</small></summary>
+
+```bash
+npm install express
+npm install -D @types/express # for typescript
+```
+
+</details>
 
 ## Usage
 
