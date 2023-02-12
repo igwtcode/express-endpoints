@@ -5,7 +5,7 @@ const jestConfig: JestConfigWithTsJest = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   collectCoverage: true,
-  coverageReporters: ['text'],
+  coverageProvider: 'v8',
   coverageDirectory: './coverage',
   moduleNameMapper: {
     '^@lib/(.*).js$': '<rootDir>/src/lib/$1',
