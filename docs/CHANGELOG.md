@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/igwtcode/express-endpoints/compare/v1.0.3...v1.0.4) (2023-03-25)
+
+
+### Bug Fixes
+
+* **deps:** update package.json ([973b2e1](https://github.com/igwtcode/express-endpoints/commit/973b2e1681785d7dcd99331da39ab3a6d13d02ab))
+
 ## [1.0.3](https://github.com/igwtcode/express-endpoints/compare/v1.0.2...v1.0.3) (2023-03-09)
 
 
